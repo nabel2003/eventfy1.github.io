@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventify - Discover Amazing Events</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS for scroll animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .hero {
+            background: url('b0690739-eab0-4508-b182-a04eccf15e64.jpg') no-repeat center center/cover;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            text-align: center;
+            position: relative;
+            padding-bottom: 100px;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 0;
+        }
+
+        .hero .content {
+            z-index: 1;
+        }
+
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .footer {
+            background-color: #212529;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .login-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.3s ease-in-out;
+            z-index: -1;
+        }
+
+        .login-btn:hover::after {
+            left: 0;
+        }
+
+        .login-btn:hover {
+            color: #000;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Eventify</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Add_event.html">add event</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-light ms-2 login-btn" href="Login.html" style="border-radius: 5px; position: relative; overflow: hidden;">Log In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="content">
+            <p class="lead animate__animated animate__fadeInUp">Book tickets to concerts, festivals, and much more!</p>
+            <form class="search-bar d-flex justify-content-center mt-4 animate__animated animate__fadeIn">
+                <input type="text" class="form-control w-50" placeholder="Search for events...">
+                <button type="submit" class="btn btn-primary ms-2">Search</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4" data-aos="fade-up">Why Choose Eventify?</h2>
+            <div class="row text-center">
+                <div class="col-md-4" data-aos="flip-left">
+                    <i class="bi bi-calendar-check display-4 text-primary"></i>
+                    <h5 class="mt-3">Easy Booking</h5>
+                    <p>Book tickets in just a few clicks with our seamless process.</p>
+                </div>
+                <div class="col-md-4" data-aos="flip-left">
+                    <i class="bi bi-geo-alt display-4 text-primary"></i>
+                    <h5 class="mt-3">Location-Based</h5>
+                    <p>Find events close to you with smart location filters.</p>
+                </div>
+                <div class="col-md-4" data-aos="flip-left">
+                    <i class="bi bi-stars display-4 text-primary"></i>
+                    <h5 class="mt-3">Top Events</h5>
+                    <p>Get personalized recommendations for trending events.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Listings -->
+    <section id="events" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4" data-aos="fade-up">Upcoming Events</h2>
+            <div class="row">
+                <!-- Event Card 1 -->
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="card">
+                        <img src="e94f839f-f997-450c-a5f6-45951d6f8bca (1).jpg" class="card-img-top" alt="Concert">
+                        <div class="card-body">
+                            <h5 class="card-title">Live Concert</h5>
+                            <p class="card-text">Enjoy a night of amazing music at City Arena.</p>
+                            <button class="btn btn-primary w-100">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Event Card 2 -->
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="card">
+                        <img src="8ba94e4f-7b79-4f0d-9ddc-6562000fc896.jpg" class="card-img-top" alt="Festival">
+                        <div class="card-body">
+                            <h5 class="card-title">Cultural Festival</h5>
+                            <p class="card-text">Explore traditions and culture at Open Park.</p>
+                            <button class="btn btn-primary w-100">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Event Card 3 -->
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="card">
+                        <img src="e7404bd6-f37e-4532-ac61-84384290c6f7 (1).png" class="card-img-top" alt="Theater">
+                        <div class="card-body">
+                            <h5 class="card-title">Drama Night</h5>
+                            <p class="card-text">Experience live drama at the Grand Theater.</p>
+                            <button class="btn btn-primary w-100">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Horizontal Cards -->
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="istockphoto-1440483244-612x612.jpg" class="card-img-top" alt="Football Match">
+                        <div class="card-body">
+                            <h5 class="card-title">Football Match</h5>
+                            <p class="card-text">
+							Friendly match between local teams or communities.</p>
+                            <button class="btn btn-primary w-100">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="download.jpg" class="card-img-top" alt="Theater Performance">
+                        <div class="card-body">
+                            <h5 class="card-title"> Environmental Campaigns</h5>
+                            <p class="card-text">Clean-Up Drives Cleaning tourist spots like Wadi Rum, Petra, or Dead Sea beaches</p>
+                            <button class="btn btn-primary w-100">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="40-Fun-Classroom-Games-And-Activities-For-Kids.jpg.webp" class="card-img-top" alt="Music Concert">
+                        <div class="card-body">
+                            <h5 class="card-title">Fun Activities for Children</h5>
+                            <p class="card-text">Organizing a day full of games and creative activities in underprivileged areas</p>
+                            <button class="btn btn-primary w-100">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	<hr>
+ <section id="about-eventify" class="py-4">
+        <div class="container">
+            <p style="text-align: center; font-size: 16px; padding: 20px; background-color: #f8f9fa; font-weight:sans-serif;">
+                Eventify is a comprehensive online platform dedicated to simplifying the ticket-booking process for a wide variety of events, including sports matches, theater performances, concerts, festivals, and parties. The platform focuses on providing last-minute and affordable ticket options, offering a streamlined, user-friendly experience for discovering, browsing, and purchasing tickets to both local and international events. It supports advanced features like event categorization, personalized recommendations, and secure payment processing. Eventify aims to become a go-to platform for both event attendees and organizers, providing essential functionalities for listing, managing, and promoting events.
+            </p>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Eventify. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
